@@ -21,12 +21,12 @@ const client = new MongoClient('mongodb://localhost:27017');
 const conn = await client.connect();
 const db = conn.db('app');
 
-app.get('/api/produce.json', async (req, res) => {
+app.get('/api/produce', async (req, res) => {
   const produce = await db.collection('produce').find().toArray();
   res.status(200).json(produce);
 });
 
-app.get('/api/produce/:id.json', async (req, res) => {
+app.get('/api/produce/:id', async (req, res) => {
   const id = new ObjectId(req.params.id);
   const produce = await db.collection('produce').findOne({ _id: id });
 
