@@ -1,0 +1,26 @@
+/*
+# Test the Server API
+*/
+@host http://localhost:8080
+###
+GET /api/produce.json
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+content-length: 4099
+etag: W/"1003-h6EBJuoaYKKgXNEjHoE1DH/tF7M"
+date: Mon, 07 Apr 2025 13:12:59 GMT
+connection: close
+###
+GET /api/produce/67f3cf586840ebb7256b140b.json
+
+HTTP/1.1 200  - OK
+x-powered-by: Express
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+content-length: 198
+etag: W/"c6-4yUuspvXibQyASFtwcSsSGedpBo"
+date: Mon, 07 Apr 2025 13:13:13 GMT
+connection: close
